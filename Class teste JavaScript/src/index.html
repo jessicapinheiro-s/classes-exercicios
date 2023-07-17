@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <div>
+            <label for="inNome">Nome</label>
+            <input type="text" id="inNome">
+        </div>
+
+        <div>
+            <label for="inPeso" >Peso</label>
+            <input type="number" id="inPeso">
+        </div>
+
+        <div>
+            <label for="inTam">Tamanho</label>
+            <input type="number" id="inTam">
+        </div>
+
+        <div>
+            <label for="inGosto">Gosto</label>
+            <input type="text" id="inGosto">
+        </div>
+        <div>
+            <label for="inCor">Cor</label>
+            <input type="text" id="inCor">
+        </div>
+        <select name="" id="tipo">
+            <option value="Citrica" selected onclick="checarOpcao()">Citrica</option>
+            <option value="Amarga" onclick="checarOpcao()">Amarga</option>
+            <option value="Doce" onclick="checarOpcao()">Doce</option>
+        </select>
+        <button type="submit" id="idEnviar">Submit</button><br>
+    </form>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
