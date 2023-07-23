@@ -1,0 +1,8 @@
+class CaminhaoTruck {
+    
+}
+class CaminhaoCavalo {
+
+}
+
+

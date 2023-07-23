@@ -1,4 +1,3 @@
-import { Fruta } from './fruta.js'
 import { Citrica } from './citrica.js'
 import { Amarga } from './amarga.js'
 import { Doce } from './doce.js'
@@ -14,11 +13,9 @@ document.getElementById('idEnviar').addEventListener('click', function () {
     verificarCampos(inTam, inPeso, inCor, inGosto, inNome);
     let linkApi = api(inNome);
 
-    let newFrutaa = new Fruta(inTam, inCor, inGosto, inPeso, inNome);
-    console.log(newFrutaa);
-
     checarOpcao();
 
+    // verifica o tipo de fruta
     if (checarOpcao() == 'Citrica') {
         Citrico(inTam, inCor, inGosto, inPeso, inNome);
     } else if (checarOpcao() == 'Amarga') {
@@ -30,12 +27,14 @@ document.getElementById('idEnviar').addEventListener('click', function () {
 })
 
 
-
+// verifica qual tipo de fruta foi selecionada pelo cliente
 function checarOpcao() {
     let opOne = document.getElementById('tipo');
     let valorOpcao = opOne.options[opOne.selectedIndex].value;
     return valorOpcao;
 }
+
+//verifica se algum dos campos está vazio 
 function verificarCampos(t, p, c, g, n) {
     let flag = '';
     while (flag == '') {
@@ -50,7 +49,7 @@ function verificarCampos(t, p, c, g, n) {
     }
 
 }
-
+//instancia Citricio
 function Citrico(t, p, c, g, n) {
     let newCitrica = new Citrica(t, p, c, g, n);
     console.log(newCitrica);
@@ -58,13 +57,15 @@ function Citrico(t, p, c, g, n) {
     return newCitrica;
 }
 
+//instancia Amargo
 function Amargo(t, p, c, g, n) {
     let newAmargo = new Amarga(t, p, c, g, n);
     console.log(newAmargo);
     console.log(newAmargo.retornar());
     return newAmargo;
 }
- 
+
+//instancia Doce
 function DoceFuncao(t, p, c, g, n) {
     let newDoce = new Doce(t, p, c, g, n);
     console.log(newDoce);
@@ -72,6 +73,7 @@ function DoceFuncao(t, p, c, g, n) {
     return newDoce;
 }
 
+//tratamento de dados para se usaa na API
 function textAjuste(t){
     let textoAjustado = t.toLowerCase();
     return textoAjustado;
