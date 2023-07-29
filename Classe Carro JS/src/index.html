@@ -9,24 +9,27 @@
 </head>
 
 <body>
-    <form action="">
-        <p>Vaiculo:
-            <input type="text" name="Veiculo" id="inVeiculo" class="inVeiculo">
-        </p>
-        <p>Tipo de veiculo:
-            <input type="text" name="TipoVeiculo" id="inVeiculoTipo" class="inVeiculoTipo">
-        </p>
-        <button type="submit" id="inEnviar">Submit</button>
-    </form>
-    <select name="" id="tipo">
-        <option value="Citrica" selected onclick="checarOpcao()">Carro</option>
-        <option value="Amarga" onclick="checarOpcao()">Caminhão</option>
-        <option value="Doce" onclick="checarOpcao()">Moto</option>
-    </select>
-
-    <div id="opcao-container">
-
+    <div class="container">
+        <form action="">
+            <p>Veiculo:
+                <input type="text" name="Veiculo" id="inVeiculo" class="inVeiculo">
+            </p>
+            <p>Tipo de veiculo:
+                <input type="text" name="TipoVeiculo" id="inVeiculoTipo" class="inVeiculoTipo">
+            </p>
+            <button type="submit" id="inEnviar">Submit</button>
+        </form>
+        <div class="container-select">
+            <select name="" id="tipo">
+                <option value="Citrica" selected onclick="checarOpcao()">Carro</option>
+                <option value="Amarga" onclick="checarOpcao()">Caminhão</option>
+                <option value="Doce" onclick="checarOpcao()">Moto</option>
+            </select>
+        </div>
     </div>
+    
+
+  
     <div class="background-modal" id="background-modal">
         <div class="modal" id="modal">
             <p id="txtModal"></p>

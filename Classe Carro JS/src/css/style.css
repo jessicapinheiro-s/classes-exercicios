@@ -2,11 +2,55 @@
     margin: 0px;
     padding: 0px;
 }
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     z-index: 0;
 }
+
+/* Fomrmulário */
+.container {
+    border: 1px solid red;
+}
+
+form,
+.container-select {
+    width: 200px;
+    margin: auto;
+}
+
+select,
+input {
+    outline: none;
+}
+
+select {
+    width: 200px;
+    border: 1px solid #e0e0e0be;
+    padding: 5px;
+}
+
+form input {
+    border: 1px solid #e0e0e0be;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+form input:focus,
+select:focus {
+    border: 1px solid #4fabf7;
+}
+
+#inEnviar {
+    padding: 10px;
+    border: none;
+    background-color: #4fabf7;
+    border-radius: 6px;
+    color: #fff;
+}
+
+/* Modal */
 
 .modal {
     width: 200px;
@@ -31,14 +75,15 @@ body{
     justify-content: center;
 }
 
-#fecharModal{
+#fecharModal {
     padding: 10px 15px;
     border-radius: 8px;
     border: none;
-    background-color: #4d4d91;
+    background-color: #c72929;
     color: #fff;
 }
-#fecharModal:hover{
-    background-color: #353563;
+
+#fecharModal:hover {
+    background-color: #4fabf7;
 
 }
