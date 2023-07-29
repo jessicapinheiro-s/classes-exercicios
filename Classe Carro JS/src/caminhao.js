@@ -1,6 +1,6 @@
 import { Veiculo } from "./Veiculo";
 
-class Caminhao extends Veiculo{
+export class Caminhao extends Veiculo{
     nome;
     tamanho;
     cor;

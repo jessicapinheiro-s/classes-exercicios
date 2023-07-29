@@ -1,4 +1,3 @@
-import{ Carro }from "./carro.js"
 document.getElementById('inEnviar').addEventListener('click', function (event) {
     //evitar que a pagina recarregue poiso button é do tipo submit ou está dentro de um form 
     event.preventDefault()

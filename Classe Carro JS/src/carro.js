@@ -1,6 +1,6 @@
 import { Veiculo } from "./Veiculo.js";
 
-class Carro extends Veiculo{
+export class Carro extends Veiculo{
     nome;
     altura;
     comprimento;
