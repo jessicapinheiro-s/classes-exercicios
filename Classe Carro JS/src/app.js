@@ -1,3 +1,7 @@
+import { CarroSedan } from "./carro.js";
+import { CarroSUV } from "./carro.js";
+import { Caminhao } from "./caminhao.js"
+
 document.getElementById('inEnviar').addEventListener('click', function (event) {
     //evitar que a pagina recarregue poiso button é do tipo submit ou está dentro de um form 
     event.preventDefault()
@@ -6,12 +10,12 @@ document.getElementById('inEnviar').addEventListener('click', function (event) {
 
     if (verificarInput(inVeiculoNome, inVeiculoTipo) == 'invalido') {
         abrirModal();
-        txtModal('Preencha os campos corretamente', 'Fechar');
         console.log('Algum campo não foi preenchido');
+        return;
     }
 
-    if(checarOpcao() == 'Carro'){
-    
+    if (checarOpcao() == 'Carro') {
+        displayBoxCarro();
     }
 
 })
@@ -29,7 +33,7 @@ function abrirModal() {
 }
 
 //deixa o texto do modal dinamico
-function txtModal(a, b) {
+/*function txtModal(a, b) {
     let p = document.getElementById('txtModal');
     let txt = document.createTextNode(a);
 
@@ -37,16 +41,11 @@ function txtModal(a, b) {
     button.setAttribute('Id', 'fecharModal');
     let txtButton = document.createTextNode(b);
 
-    //fehcar modal
-    button.onclick = function (){
-        document.getElementById('background-modal').style.display = 'none';
-    
-    }
     p.appendChild(txt);
     modal.appendChild(p);
     button.appendChild(txtButton);
     modal.appendChild(button);
-}
+}*/
 
 function checarOpcao() {
     let opOne = document.getElementById('tipo');
@@ -54,11 +53,19 @@ function checarOpcao() {
     return valorOpcao;
 }
 
-
-function criarCheck(suv){
+function criarCheck(suv) {
     let div = document.getElementById('opcao-container');
     let txt = Document.createTextNode(suv);
 }
+//fehcar modal
+document.getElementById('fecharModal').addEventListener('click',function () {
+    document.getElementById('background-modal').style.display = 'none';
+})
 
+function instCarro(){
+    let instanciaCarro = new CarroSedan(inVeiculoNome, inVeiculoTipo);
+}
 
-
+function displayBoxCarro(){
+    document.getElementById('container-Carro').style.display= 'flex'
+}

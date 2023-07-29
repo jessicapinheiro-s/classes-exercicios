@@ -15,7 +15,8 @@ body {
 }
 
 form,
-.container-select {
+.container-select,
+.container-Carro {
     width: 200px;
     margin: auto;
 }
@@ -87,3 +88,5 @@ select:focus {
     background-color: #4fabf7;
 
 }
+/*Checkbox carro*/
+

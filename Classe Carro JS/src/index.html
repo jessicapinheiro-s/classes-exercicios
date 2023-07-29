@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <form action="">
-            <p>Veiculo:
+            <p>Nome:
                 <input type="text" name="Veiculo" id="inVeiculo" class="inVeiculo">
             </p>
             <p>Tipo de veiculo:
@@ -26,14 +26,20 @@
                 <option value="Moto" onclick="checarOpcao()">Moto</option>
             </select>
         </div>
-    </div>
-    
-
-  
-    <div class="background-modal" id="background-modal">
-        <div class="modal" id="modal">
-            <p id="txtModal"></p>
+        <div class="background-modal" id="background-modal">
+            <div class="modal" id="modal">
+                <p id="txtModal">Preencha os campos corretamente</p>
+                <button id="fecharModal">Fechar</button>
+            </div>
         </div>
+    </div>
+
+
+    <div class="container-Carro" id="container-Carro">
+        <label for="inSedanBox">Sedan</label>
+        <input type="checkbox" name="" id="inSedanBox">
+        <label for="inSUVBox">SUV</label>
+        <input type="checkbox" name="" id="inSUVBox">
     </div>
     <script type="module" src="app.js"></script>
 </body>
