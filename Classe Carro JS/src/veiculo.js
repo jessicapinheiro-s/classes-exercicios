@@ -7,7 +7,7 @@ export class Veiculo {
     }
 
     retornarNome(){
-        return this.nome;
+        return 'Nome do veiculo' + this.nome;
     }
 
     retornarTipo(){

@@ -51,6 +51,8 @@ function checarOpcao() {
     let valorOpcao = opOne.options[opOne.selectedIndex].value;
     return valorOpcao;
 }
+
+
 function criarCheck(suv){
     let div = document.getElementById('opcao-container');
     let txt = Document.createTextNode(suv);
