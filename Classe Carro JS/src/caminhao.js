@@ -1,4 +1,4 @@
-import { Veiculo } from "./Veiculo";
+import { Veiculo } from "./veiculo.js";
 
 export class Caminhao extends Veiculo{
     nome;

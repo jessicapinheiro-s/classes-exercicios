@@ -1,4 +1,4 @@
-import { Veiculo } from "./Veiculo.js";
+import { Veiculo } from "./veiculo.js";
 
 export class Carro extends Veiculo{
     nome;
@@ -15,10 +15,10 @@ class CarroSedan extends Carro{
     nome;
     altura;
     comprimento;
-    tipoCarro;
-    constructor(nome, tipoCarro,altura,comprimento){
+    valorCarro;
+    constructor(nome, valorCarro,altura,comprimento){
         this.nome = nome;
-        this.tipoCarro = tipoCarro;
+        this.valorCarro = valorCarro;
         this.altura = altura;
         this.comprimento = comprimento;
     }
@@ -27,10 +27,10 @@ class CarroSUV extends Carro{
     nome;
     altura;
     comprimento;
-    tipoCarro;
-    constructor(nome, tipoCarro,altura,comprimento){
+    valorCarro;
+    constructor(nome, valorCarro,altura,comprimento){
         this.nome = nome;
-        this.tipoCarro = tipoCarro;
+        this.valorCarro = valorCarro;
         this.altura = altura;
         this.comprimento = comprimento;
     }

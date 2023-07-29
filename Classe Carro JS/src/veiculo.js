@@ -1,9 +1,9 @@
 export class Veiculo {
     nome;
-    tipoCarro;
-    constructor(nome, tipoCarro){
+    valorCarro;
+    constructor(nome, valorCarro){
         this.nome = nome;
-        this.tipoCarro = tipoCarro;
+        this.valorCarro = valorCarro;
     }
 
     retornarNome(){
@@ -11,6 +11,6 @@ export class Veiculo {
     }
 
     retornarTipo(){
-        return 'O tipo desse caro é: '+ this.tipoCarro; 
+        return 'O valor desse caro é: '+ this.valorCarro; 
     }
 }

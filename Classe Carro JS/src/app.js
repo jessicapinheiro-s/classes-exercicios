@@ -6,9 +6,9 @@ document.getElementById('inEnviar').addEventListener('click', function (event) {
     //evitar que a pagina recarregue poiso button é do tipo submit ou está dentro de um form 
     event.preventDefault()
     let inVeiculoNome = document.getElementById('inVeiculo').value.toLowerCase();
-    let inVeiculoTipo = document.getElementById('inVeiculoTipo').value.toLowerCase();
+    let inVeiculoValor = document.getElementById('inVeiculoValor').value;
 
-    if (verificarInput(inVeiculoNome, inVeiculoTipo) == 'invalido') {
+    if (verificarInput(inVeiculoNome, inVeiculoValor) == 'invalido') {
         abrirModal();
         console.log('Algum campo não foi preenchido');
         return;
