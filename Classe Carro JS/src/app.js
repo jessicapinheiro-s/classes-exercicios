@@ -6,15 +6,13 @@ document.getElementById('inEnviar').addEventListener('click', function (event) {
 
     if (verificarInput(inVeiculoNome, inVeiculoTipo) == 'invalido') {
         abrirModal();
-        txtModal('Preencha os campos corretamente');
+        txtModal('Preencha os campos corretamente', 'Fechar');
         console.log('Algum campo não foi preenchido');
     }
 
     if(checarOpcao() == 'Carro'){
     
     }
-
-    
 
 })
 
@@ -25,24 +23,29 @@ function verificarInput(Vn, Vt) {
     }
 }
 
-//fechar modal
-
-document.getElementById('fecharModal').addEventListener('click', function () {
-    document.getElementById('background-modal').style.display = 'none';
-})
-
 //abrir modal
 function abrirModal() {
     document.getElementById('background-modal').style.display = 'flex';
 }
 
 //deixa o texto do modal dinamico
-function txtModal(a) {
+function txtModal(a, b) {
     let p = document.getElementById('txtModal');
     let txt = document.createTextNode(a);
 
+    let button = document.createElement('button');
+    button.setAttribute('Id', 'fecharModal');
+    let txtButton = document.createTextNode(b);
+
+    //fehcar modal
+    button.onclick = function (){
+        document.getElementById('background-modal').style.display = 'none';
+    
+    }
     p.appendChild(txt);
-    modal.appendChild(p)
+    modal.appendChild(p);
+    button.appendChild(txtButton);
+    modal.appendChild(button);
 }
 
 function checarOpcao() {
@@ -55,8 +58,7 @@ function checarOpcao() {
 function criarCheck(suv){
     let div = document.getElementById('opcao-container');
     let txt = Document.createTextNode(suv);
-
-    
-
 }
+
+
 
